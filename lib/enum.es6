@@ -1,12 +1,17 @@
 "use strict";
 
-import os from 'os';
 import EnumItem from './enumItem';
 import { isString } from './isType';
 import { indexOf } from './indexOf';
 import isBuffer from 'is-buffer';
 
-const endianness = os.endianness();
+let endianness;
+try {
+  import os from 'os';
+  endianness = os.endianness();
+} catch(e) {
+  endianness = 'LE';  // for react-native
+}
 
 /**
  * Represents an Enum with enum items.
