@@ -48,8 +48,7 @@
   "scripts": {
     "test": "gulp test-ci",
     "build": "gulp build",
-    "prepublish": "gulp",
-    "preinstall": "gulp build"
+    "prepublish": "gulp"
   },
   "testling": {
     "browsers": [
