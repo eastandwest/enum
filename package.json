@@ -11,7 +11,8 @@
     "lib": "./lib"
   },
   "dependencies": {
-    "is-buffer": "^1.1.0"
+    "is-buffer": "^1.1.0",
+    "os": "^0.1.1"
   },
   "devDependencies": {
     "expect.js": ">= 0.1.2",
