@@ -13,12 +13,12 @@ var indexOf = require("./indexOf").indexOf;
 var isBuffer = _interopRequire(require("is-buffer"));
 
 var endianness = undefined;
-try {
+if (window.userAgent && window.userAgent === "react-native") {
+  endianness = "LE"; // for react-native
+} else {
   var os = _interopRequire(require("os"));
 
   endianness = os.endianness();
-} catch (e) {
-  endianness = "LE"; // for react-native
 }
 
 /**
