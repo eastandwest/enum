@@ -6,11 +6,11 @@ import { indexOf } from './indexOf';
 import isBuffer from 'is-buffer';
 
 let endianness;
-try {
+if(window.userAgent && window.userAgent === 'react-native') {
+  endianness = 'LE';  // for react-native
+} else {
   import os from 'os';
   endianness = os.endianness();
-} catch(e) {
-  endianness = 'LE';  // for react-native
 }
 
 /**
