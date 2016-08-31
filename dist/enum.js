@@ -12,14 +12,7 @@ var indexOf = require("./indexOf").indexOf;
 
 var isBuffer = _interopRequire(require("is-buffer"));
 
-var endianness = undefined;
-if (window && window.navigator && window.navigator.userAgent && window.navigator.userAgent === "react-native") {
-  endianness = "LE"; // for react-native
-} else {
-  var os = _interopRequire(require("os"));
-
-  endianness = os.endianness();
-}
+var endianness = "LE"; // for react-native
 
 /**
  * Represents an Enum with enum items.

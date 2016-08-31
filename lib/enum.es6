@@ -5,13 +5,7 @@ import { isString } from './isType';
 import { indexOf } from './indexOf';
 import isBuffer from 'is-buffer';
 
-let endianness;
-if(window && window.navigator && window.navigator.userAgent && window.navigator.userAgent === 'react-native') {
-  endianness = 'LE';  // for react-native
-} else {
-  import os from 'os';
-  endianness = os.endianness();
-}
+const endianness = 'LE';  // for react-native
 
 /**
  * Represents an Enum with enum items.
